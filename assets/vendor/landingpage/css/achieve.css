@@ -1,0 +1,89 @@
+.navbar-brand img {
+    height: 40px;
+}
+
+.linkvan a:hover {
+    color: #24b108 !important;
+    text-decoration: none;
+    transition: color 0.5s ease, text-decoration 0.5s ease;
+}
+
+.kojimacolor {
+    background-color: #88ad2c !important;
+    color: #fff !important;
+}
+
+.text-kojima {
+    color: #88ad2c !important;
+}
+
+/* link aktif */
+.nav-link.active {
+    color: #88ad2c !important;
+}
+
+/* tinggi logo */
+.footer-logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+/* preloader */
+#preloader {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* achievements */
+.iso-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.iso-title span {
+    color: #88AD2C;
+}
+
+.swiper {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.swiper-slide {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.award-caption {
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.certificate-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.awards-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+}

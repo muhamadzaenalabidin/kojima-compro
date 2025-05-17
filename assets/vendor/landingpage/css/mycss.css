@@ -1,0 +1,94 @@
+.navbar-brand img {
+    height: 40px;
+}
+
+.linkvan a:hover {
+    color: #24b108 !important;
+    text-decoration: none;
+    transition: color 0.5s ease, text-decoration 0.5s ease;
+}
+
+.kojimacolor {
+    background-color: #88ad2c !important;
+    color: #fff !important;
+}
+
+.text-kojima {
+    color: #88ad2c !important;
+}
+
+/* link aktif */
+.nav-link.active {
+    color: #88ad2c !important;
+}
+
+/* tinggi logo */
+.footer-logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+/* carousel */
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+/* end carousel */
+
+/* preloader */
+
+#preloader {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-logo {
+    width: 100px;
+    height: auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* end preloader */
+
+
+
+/* cust swipper */
+
+.mySwiperCust .swiper-slide img {
+    width: auto;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.mySwiperCust .swiper-slide img:hover {
+    transform: scale(1.1);
+}

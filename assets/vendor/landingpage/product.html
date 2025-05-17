@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kijima Auto Technology</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/mycss.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- css khusus -->
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- preloader -->
+    <div id="preloader"
+        class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white"
+        style="z-index: 1050;">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- end preloader -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top nav-underline">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/image/kojima-logo.png" alt="Kijima Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item linkvan"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item linkvan"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item dropdown linkvan">
+                        <a class="nav-link dropdown-toggle linkvan" href="#" role="button" data-bs-toggle="dropdown">
+                            Information
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item linkvan" href="milestones.html">Milestone</a></li>
+                            <li><a class="dropdown-item linkvan" href="achievements.html">Achievement</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item linkvan"><a class="nav-link active" href="product.html">Products</a></li>
+                    <li class="nav-item linkvan"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header page -->
+    <section class="py-5 text-white mt-5" style="background: url('assets/image/bg-header.png') center/cover no-repeat;">
+        <div class="container">
+            <h2 class="fw-bold">Our Product</h2>
+        </div>
+    </section>
+    <!-- end header page -->
+
+    <!-- image hotspot -->
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="position-relative" style="max-width: 1000px; margin: auto;">
+                        <!-- Gambar interior mobil -->
+                        <img src="assets/image/cars.jpg" alt="Interior" class="img-fluid">
+
+                        <!-- Hotspot 1 -->
+                        <div class="hotspot" style="top: 15%; left: 53%;" data-bs-toggle="tooltip" title="Assist Grips">
+                            <a href="#assistgrip"><i class="bi bi-circle-fill"></i></a>
+                        </div>
+
+                        <div class="hotspot" style="top: 41%; left: 43%;" data-bs-toggle="tooltip"
+                            title="Inside Handle">
+                            <a href="#handle"><i class="bi bi-circle-fill"></i></a>
+                        </div>
+
+                        <!-- Hotspot 2 -->
+                        <div class="hotspot" style="top: 59%; left: 2%;" data-bs-toggle="tooltip" title="Registers">
+                            <a href="#register"><i class="bi bi-circle-fill"></i></a>
+                        </div>
+
+                        <div class="hotspot" style="top: 68%; left: 10%;" data-bs-toggle="tooltip" title="Cup Holder">
+                            <a href="#cupholder"><i class="bi bi-circle-fill"></i></a>
+                        </div>
+
+                        <!-- Hotspot 2 -->
+                        <div class="hotspot" style="top: 67%; left: 30%;" data-bs-toggle="tooltip"
+                            title="Upper Conslole">
+                            <a href="#upperconsole"><i class="bi bi-circle-fill"></i></a>
+                        </div>
+
+                        <!-- Hotspot 3 -->
+                        <div class="hotspot" style="top: 58%; left: 25%;" data-bs-toggle="tooltip"
+                            title="Heater Control">
+                            <a href="#heater"><i class="bi bi-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end image hotspor -->
+
+    <!-- product list -->
+    <section class="py-5 bg-light">
+        <div class="container mb-5">
+            <h2 class="text-center mb-5 fw-bold">Our Products</h2>
+            <div class="row g-4">
+
+                <!-- Product 1 -->
+                <div class="col-12 col-md-4" id="assistgrip">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/image/part/assist_grip.jpg" class="card-img-top" alt="Assist grips" />
+                        <div class="card-body">
+                            <h5 class="card-title">Assist grips</h5>
+                            <p class="card-text">People hold onto these grips when riding in vehicles and getting in and
+                                out of them. The current trend is for these to be retractable so that they do not stand
+                                out. Our molding technology has been highly evaluated by the Japan Society of Polymer
+                                Processing (awarded the Japan Society of Polymer Processing “Aoki Katashi” Technical
+                                Award).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-12 col-md-4" id="handle">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/image/part/inside_handle.jpg" class="card-img-top" alt="Inside Handles" />
+                        <div class="card-body">
+                            <h5 class="card-title">Inside Handles</h5>
+                            <p class="card-text">Products that open the vehicle door from the inside. Door lock is
+                                operated by electric control with a switch, and the door opens and closes in one motion.
+                                They are also equipped with a function that allows the door to be opened and closed
+                                physically in the event that the electricity is down.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-12 col-md-4" id="heater">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/image/part/heater.jpg" class="card-img-top" alt="Heater Control" />
+                        <div class="card-body">
+                            <h5 class="card-title">Heater Control</h5>
+                            <p class="card-text">The heater control maintains a comfortable temperature in the cabin. We
+                                develop the electronic circuits and produce the design, including the look of the
+                                nighttime lighting. We produce two types: a digital heater control and electric
+                                push-type heat control.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-12 col-md-4" id="upperconsole">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/image/part/upper_console.jpg" class="card-img-top" alt="Upper Console" />
+                        <div class="card-body">
+                            <h5 class="card-title">Upper Console</h5>
+                            <p class="card-text">By setting the layout of items we would want to keep within reach, such
+                                as trays and cup holders, and adding decorative elements to suit the vehicle concept, we
+                                are working to enhance the product appeal of vehicle interiors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-12 col-md-4" id="cupholder">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/image/part/cupholder.jpg" class="card-img-top" alt="Cup holders" />
+                        <div class="card-body">
+                            <h5 class="card-title">Cup holders</h5>
+                            <p class="card-text">We produce a wide variety of cup holders, including push types. We
+                                studied the shapes of plastic bottles around the world and developed a mechanism to keep
+                                the bottles from falling over. Cup holders with illumination have appeared recently, and
+                                we continue to develop these products to meet user needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-12 col-md-4" id="register">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/image/part/register.jpg" class="card-img-top" alt="Registers" />
+                        <div class="card-body">
+                            <h5 class="card-title">Registers</h5>
+                            <p class="card-text">Registers are important components used as the air duct covers inside
+                                vehicles for controlling the cabin environment. We also produce swing registers with
+                                fins that move automatically.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- end product list -->
+
+    <!-- footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row text-center text-md-start align-items-start g-4">
+
+                <!-- Kojima Industries Logo -->
+                <div class="col-12 col-md-3 text-center">
+                    <img src="assets/image/logo/koijma-jpn.png" class="img-fluid mb-2 footer-logo"
+                        alt="Kojima Industries">
+                    <p class="mb-0 fw-bold">KOJIMA INDUSTRIES CORPORATION</p>
+                </div>
+
+                <!-- Kojima Auto Technology Logo & Address -->
+                <div class="col-12 col-md-3 text-center">
+                    <img src="assets/image/logo/kojima-logo.png" class="img-fluid mb-2 footer-logo"
+                        alt="Kojima Auto Technology">
+                    <p class="mb-0 small">
+                        Lippo Cikarang, Delta Silicon, Jl. Ramin 1 No.6 Blok G6 No, Sukamahi, Central Cikarang, Bekasi
+                        Regency, West Java 17550
+                    </p>
+                </div>
+
+                <!-- EATI Logo & Address -->
+                <div class="col-12 col-md-3 text-center">
+                    <img src="assets/image/logo/eati.png" class="img-fluid mb-2 footer-logo" alt="EATI">
+                    <p class="mb-0 small">
+                        KIM, Jl. Mitra Raya II Blok E3, Parungmulya, Kec. Ciampel,Karawang, Jawa Barat 41363
+                    </p>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="col-12 col-md-3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2944509446397!2d107.1693047!3d-6.3559177999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699b0059ce979b%3A0x23a3040362b83121!2sPT.%20Kojima%20Auto%20Technology%20Indonesia!5e0!3m2!1sid!2sid!4v1746857093524!5m2!1sid!2sid"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <small class="text-white-50">&copy; 2025 Kojima Auto Technology (Indonesia) Co., Ltd. All Rights
+                        Reserved.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- end footer -->
+
+    <!-- end body -->
+    <!-- custom js -->
+    <script src="assets/js/product.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</body>
+
+</html>

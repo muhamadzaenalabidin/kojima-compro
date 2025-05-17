@@ -1,0 +1,55 @@
+ html {
+     scroll-behavior: smooth;
+ }
+
+ .card-img-top {
+     object-fit: cover;
+     height: 200px;
+ }
+
+ .hotspot {
+     position: absolute;
+     color: #0dcaf0;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: transform 0.2s ease;
+ }
+
+ .hotspot:hover {
+     transform: scale(1.2);
+ }
+
+
+ /* Hotspot event */
+ .highlight-card {
+     animation: bgFlash 2s ease-in-out;
+ }
+
+ @keyframes bgFlash {
+     0% {
+         background-color: transparent;
+     }
+
+     30% {
+         background-color: #88AD2C;
+         /* Bootstrap's light green (alert-success bg) */
+     }
+
+     70% {
+         background-color: #88AD2C;
+     }
+
+     100% {
+         background-color: transparent;
+     }
+ }
+
+ /* preloader */
+ #preloader {
+     transition: opacity 0.5s ease, visibility 0.5s ease;
+ }
+
+ #preloader.hidden {
+     opacity: 0;
+     visibility: hidden;
+ }
