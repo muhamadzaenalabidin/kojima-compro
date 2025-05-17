@@ -27,6 +27,13 @@
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
+        <a class="nav-link <?= $active == 'footer' ? 'active' : 'collapsed'; ?>" href="<?= base_url('footer'); ?>">
+          <i class="bi bi-window"></i>
+          <span>Footer</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link <?= $active == 'slider' ? 'active' : 'collapsed'; ?>" href="<?= base_url('slider'); ?>">
           <i class="bi bi-window"></i>
           <span>Slider</span>

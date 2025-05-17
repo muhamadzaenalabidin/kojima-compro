@@ -1,37 +1,22 @@
 <!-- Carousel -->
 <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-            <img src="<?= base_url() ?>/assets/vendor/landingpage/image/slider/slide1.jpeg" class="d-block w-100" alt="Slide 1">
-            <div class="carousel-caption text-start text-white">
-                <h1>Two Thousand Thirteen - 2013</h1>
-                <p>Our production line is designed to support our manufacturing technology with maximum performance.
-                </p>
-                <a href="<?= base_url('landing/product') ?>" class="btn kojimacolor me-2">Read More</a>
-                <a href="<?= base_url('landing/contact') ?>" class="btn btn-outline-light">Join Us</a>
+        <?php $no = 1; ?>
+        <?php foreach ($sliders as $slide) : ?>
+            <!-- Slide 1 -->
+            <div class="carousel-item <?= $no == 1 ? 'active' : '' ?>">
+                <img src="<?= base_url() ?>/assets/vendor/landingpage/image/slider/<?= $slide['image_slide'] ?>" class="d-block w-100" alt="Slide <?= $no ?>">
+                <div class="carousel-caption text-start text-white">
+                    <h1><?= $slide['headline'] ?></h1>
+                    <p><?= $slide['desk'] ?></p>
+                    </p>
+                    <a href="<?= base_url($slide['tombol_link1']) ?>" class="btn kojimacolor me-2"><?= $slide['tombol_text1'] ?></a>
+                    <a href="<?= base_url($slide['tombol_link2']) ?>" class="btn btn-outline-light"><?= $slide['tombol_text2'] ?></a>
+                </div>
             </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-            <img src="<?= base_url() ?>/assets/vendor/landingpage/image/slider/slide2.jpeg" class="d-block w-100" alt="Slide 2">
-            <div class="carousel-caption text-start text-white">
-                <h1>Technology & Innovation</h1>
-                <p>We bring cutting-edge solutions to meet modern automotive demands.</p>
-                <a href="<?= base_url('landing/product') ?>" class="btn kojimacolor me-2">Explore</a>
-                <a href="<?= base_url('landing/contact') ?>" class="btn btn-outline-light">Join Us</a>
-            </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-            <img src="<?= base_url() ?>/assets/vendor/landingpage/image/slider/slide1.jpeg" class="d-block w-100" alt="Slide 3">
-            <div class="carousel-caption text-start text-white">
-                <h1>Global Collaboration</h1>
-                <p>Working with partners across the globe to deliver quality and efficiency.</p>
-                <a href="#ourcust" class="btn kojimacolor me-2">Partnership</a>
-                <a href="<?= base_url('landing/contact') ?>" class="btn btn-outline-light">Contact Us</a>
-            </div>
-        </div>
+
+        <?php $no++;
+        endforeach; ?>
     </div>
 
     <!-- Controls -->

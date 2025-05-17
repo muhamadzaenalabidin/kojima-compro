@@ -17,11 +17,14 @@ class Landing extends CI_Controller
         $data['navbrand'] = $this->modelLanding->getdatabrand();
         $data['category'] = $this->modelLanding->getAllProductCategory();
         $data['customers'] = $this->modelLanding->getAllCustomers();
+        $data['sliders'] = $this->modelLanding->getAllActiveSliders();
+        $data['footercomp'] = $this->modelLanding->getProfileCompany();
+        $data['footergcomp'] = $this->modelLanding->getFooterGroups();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
         $this->load->view('landing/index', $data);
-        $this->load->view('landing/templates/footer');
+        $this->load->view('landing/templates/footer', $data);
     }
 
     public function about()
@@ -30,11 +33,13 @@ class Landing extends CI_Controller
         $data['menu'] = $this->modelLanding->getAllMenu();
         $data['submenu'] = $this->modelLanding->getAllSubmenu();
         $data['navbrand'] = $this->modelLanding->getdatabrand();
+        $data['footercomp'] = $this->modelLanding->getProfileCompany();
+        $data['footergcomp'] = $this->modelLanding->getFooterGroups();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
         $this->load->view('landing/about/index');
-        $this->load->view('landing/templates/footer');
+        $this->load->view('landing/templates/footer', $data);
     }
 
     public function milestones()
@@ -44,11 +49,13 @@ class Landing extends CI_Controller
         $data['submenu'] = $this->modelLanding->getAllSubmenu();
         $data['navbrand'] = $this->modelLanding->getdatabrand();
 
+        $data['footercomp'] = $this->modelLanding->getProfileCompany();
+        $data['footergcomp'] = $this->modelLanding->getFooterGroups();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
         $this->load->view('landing/milestone/index');
-        $this->load->view('landing/templates/footer');
+        $this->load->view('landing/templates/footer', $data);
     }
 
     public function achievements()
@@ -57,11 +64,13 @@ class Landing extends CI_Controller
         $data['menu'] = $this->modelLanding->getAllMenu();
         $data['submenu'] = $this->modelLanding->getAllSubmenu();
         $data['navbrand'] = $this->modelLanding->getdatabrand();
+        $data['footercomp'] = $this->modelLanding->getProfileCompany();
+        $data['footergcomp'] = $this->modelLanding->getFooterGroups();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
         $this->load->view('landing/achievements/index');
-        $this->load->view('landing/templates/footer');
+        $this->load->view('landing/templates/footer', $data);
     }
 
     public function product()
@@ -71,11 +80,13 @@ class Landing extends CI_Controller
         $data['submenu'] = $this->modelLanding->getAllSubmenu();
         $data['navbrand'] = $this->modelLanding->getdatabrand();
         $data['product'] = $this->modelLanding->getAllProduct();
+        $data['footercomp'] = $this->modelLanding->getProfileCompany();
+        $data['footergcomp'] = $this->modelLanding->getFooterGroups();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
         $this->load->view('landing/product/index', $data);
-        $this->load->view('landing/templates/footer');
+        $this->load->view('landing/templates/footer', $data);
     }
 
     public function contact()
@@ -85,10 +96,13 @@ class Landing extends CI_Controller
         $data['submenu'] = $this->modelLanding->getAllSubmenu();
         $data['navbrand'] = $this->modelLanding->getdatabrand();
         $data['profile'] = $this->modelLanding->getProfileCompany();
+        $data['groups'] = $this->modelLanding->getAllGroups();
+        $data['footercomp'] = $this->modelLanding->getProfileCompany();
+        $data['footergcomp'] = $this->modelLanding->getFooterGroups();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
         $this->load->view('landing/contact/index', $data);
-        $this->load->view('landing/templates/footer');
+        $this->load->view('landing/templates/footer', $data);
     }
 }

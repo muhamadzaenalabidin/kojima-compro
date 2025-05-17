@@ -208,6 +208,13 @@ class modelAdmin extends CI_Model
     public function addGroups($data)
     {
         $this->db->insert('group_comp', $data);
+        $id_gcomp = $this->db->insert_id();
+
+
+        $this->db->insert('footer', [
+            'id_gcomp' => $id_gcomp,
+            'status'   => 'off'
+        ]);
     }
 
     public function getGroupById($id)
@@ -254,5 +261,29 @@ class modelAdmin extends CI_Model
     {
         $this->db->where('id_slider', $id);
         $this->db->delete('slider');
+    }
+
+    // footer
+    public function getFooterWithCompany()
+    {
+        $this->db->select('group_comp.logo_gcomp, group_comp.nama_gcomp, footer.status, footer.id_footer');
+        $this->db->from('footer');
+        $this->db->join('group_comp', 'group_comp.id_group = footer.id_gcomp');
+        return $this->db->get()->result_array();
+    }
+
+    public function getFooterById($id)
+    {
+        $this->db->select('group_comp.logo_gcomp, group_comp.nama_gcomp, footer.status, footer.id_footer');
+        $this->db->from('footer');
+        $this->db->join('group_comp', 'group_comp.id_group = footer.id_gcomp');
+        $this->db->where('id_footer', $id);
+        return $this->db->get()->row_array();
+    }
+
+
+    public function ubahFooter($id, $status)
+    {
+        return $this->db->update('footer', ['status' => $status], ['id_footer' => $id]);
     }
 }

@@ -48,7 +48,7 @@ class Groups extends CI_Controller
                 $config['upload_path']   = './assets/vendor/landingpage/image/groups/';
                 $config['allowed_types'] = 'jpg|jpeg|png';
                 $config['max_size']      = 2048;
-                $config['name']         = 'logo-gcomp' . time();
+                $config['file_name']         = 'logo-gcomp-' . time();
 
                 $this->load->library('upload', $config);
 
@@ -62,6 +62,7 @@ class Groups extends CI_Controller
                         'contactgroup_2' => htmlspecialchars($input['contactgcomp2']),
                         'logo_gcomp'     => $image
                     ];
+
                     $this->modelAdmin->addGroups($upload_data);
                     $this->session->set_flashdata('flash', 'ditambahkan');
                     redirect('groups');
@@ -106,7 +107,7 @@ class Groups extends CI_Controller
                 $config['upload_path']   = './assets/vendor/landingpage/image/groups/';
                 $config['allowed_types'] = 'jpg|jpeg|png';
                 $config['max_size']      = 2048;
-                $config['file_name']     = 'logo-gcomp' . time();
+                $config['file_name']     = 'logo-gcomp-' . time();
                 $this->load->library('upload', $config);
 
                 if ($this->upload->do_upload('logo_gcomp')) {
