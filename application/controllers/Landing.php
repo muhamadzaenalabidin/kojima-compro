@@ -20,6 +20,7 @@ class Landing extends CI_Controller
         $data['sliders'] = $this->modelLanding->getAllActiveSliders();
         $data['footercomp'] = $this->modelLanding->getProfileCompany();
         $data['footergcomp'] = $this->modelLanding->getFooterGroups();
+        $data['company'] = $this->modelLanding->getProfileCompany();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
@@ -38,7 +39,7 @@ class Landing extends CI_Controller
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
-        $this->load->view('landing/about/index');
+        $this->load->view('landing/about/index', $data);
         $this->load->view('landing/templates/footer', $data);
     }
 
@@ -51,10 +52,11 @@ class Landing extends CI_Controller
 
         $data['footercomp'] = $this->modelLanding->getProfileCompany();
         $data['footergcomp'] = $this->modelLanding->getFooterGroups();
+        $data['milestones'] = $this->modelLanding->getMilestones();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);
-        $this->load->view('landing/milestone/index');
+        $this->load->view('landing/milestone/index', $data);
         $this->load->view('landing/templates/footer', $data);
     }
 

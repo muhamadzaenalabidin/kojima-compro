@@ -60,4 +60,10 @@ class modelLanding extends CI_Model
         $this->db->where('footer.status', 'on');
         return $this->db->get()->result_array();
     }
+
+
+    public function getMilestones()
+    {
+        return $this->db->get('milestone')->result_array();
+    }
 }

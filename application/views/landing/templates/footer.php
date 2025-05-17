@@ -5,8 +5,11 @@
         <div class="row align-items-center justify-content-between text-center">
             <!-- Kojima Auto Technology Logo & Address -->
             <div class="col-12 col-md-3 mt-3">
-                <img src="<?= base_url() ?>/assets/vendor/landingpage/image/logo/<?= $footercomp['logo_comp']; ?>" class="img-fluid mb-2 footer-logo"
+                <img src="<?= base_url() ?>/assets/vendor/landingpage/image/logo/<?= $footercomp['logo_comp']; ?>" class="img-fluid mb-3 footer-logo"
                     alt="<?= $footercomp['nama_comp']; ?>">
+                <h5 class="mb-3">
+                    <?= $footercomp['nama_comp']; ?>
+                </h5>
                 <p class="mb-0 small">
                     <?= $footercomp['alamat']; ?>
                 </p>
@@ -15,7 +18,10 @@
             <!-- EATI Logo & Address -->
             <?php foreach ($footergcomp as $group) : ?>
                 <div class="col-12 col-md-3 mt-3">
-                    <img src="<?= base_url() ?>/assets/vendor/landingpage/image/groups/<?= $group['logo_gcomp']; ?>" class="img-fluid mb-2 footer-logo" alt="<?= $group['nama_gcomp']; ?>">
+                    <img src="<?= base_url() ?>/assets/vendor/landingpage/image/groups/<?= $group['logo_gcomp']; ?>" class="img-fluid mb-3 footer-logo" alt="<?= $group['nama_gcomp']; ?>">
+                    <h5 class="mb-3">
+                        <?= $group['nama_gcomp']; ?>
+                    </h5>
                     <p class="mb-0 small">
                         <?= $group['alamat_group']; ?>
                     </p>
@@ -25,7 +31,7 @@
             <!-- Google Maps -->
             <div class="col-12 col-md-3 mt-3">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2944509446397!2d107.1693047!3d-6.3559177999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699b0059ce979b%3A0x23a3040362b83121!2sPT.%20Kojima%20Auto%20Technology%20Indonesia!5e0!3m2!1sid!2sid!4v1746857093524!5m2!1sid!2sid"
+                    src="https://www.google.com/maps?q=<?= urlencode($footercomp['nama_comp'] . $footercomp['alamat']) ?>&output=embed"
                     width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>

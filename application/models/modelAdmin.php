@@ -286,4 +286,32 @@ class modelAdmin extends CI_Model
     {
         return $this->db->update('footer', ['status' => $status], ['id_footer' => $id]);
     }
+
+    // milestone
+    public function getAllMilestones()
+    {
+        return $this->db->get('milestone')->result_array();
+    }
+
+    public function getMilestoneById($id)
+    {
+        return $this->db->get_where('milestone', ['id_milestone' => $id])->row_array();
+    }
+
+    public function addMilestone($data)
+    {
+        $this->db->insert('milestone', $data);
+    }
+
+    public function updateMilestone($id, $data)
+    {
+        $this->db->where('id_milestone', $id);
+        $this->db->update('milestone', $data);
+    }
+
+    public function deleteMilestone($id)
+    {
+        $this->db->where('id_milestone', $id);
+        $this->db->delete('milestone');
+    }
 }

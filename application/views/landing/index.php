@@ -32,7 +32,7 @@
 <div class="container mt-5 pt-5">
     <div class="row mt-5">
         <div class="col-md-12 text-center">
-            <h2 class="fw-bold">Welcome to <span class="text-kojima">Kijima Auto Technology</span></h2>
+            <h2 class="fw-bold">Welcome to <span class="text-kojima"><?= isset($company['nama_comp']) ? $company['nama_comp'] : 'Our Company' ?></span></h2>
             <p>Your trusted partner in automotive solutions.</p>
         </div>
         <div class="col-md-10 mt-3 mx-auto text-center">

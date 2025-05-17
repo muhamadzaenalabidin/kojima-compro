@@ -78,6 +78,13 @@
       </li>
 
       <li class="nav-item">
+        <a class="nav-link <?= $active == 'milestones' ? 'active' : 'collapsed'; ?>" href="<?= base_url('milestones'); ?>">
+          <i class="bi bi-window"></i>
+          <span>Milestones</span>
+        </a>
+      </li>
+
+      <li class="nav-item mt-5">
         <a class="nav-link collapsed tmbl-logout" href="<?= base_url('auth/logout') ?>">
           <i class="bi bi-box-arrow-right"></i>
           <span>Logout</span>
