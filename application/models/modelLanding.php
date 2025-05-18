@@ -66,4 +66,22 @@ class modelLanding extends CI_Model
     {
         return $this->db->get('milestone')->result_array();
     }
+
+
+    // achievements
+    public function getLatestAchievements()
+    {
+        // Ambil tahun terbaru dulu
+        $this->db->select_max('tahun');
+        $query = $this->db->get('achievement');
+        $latestYear = $query->row()->tahun;
+
+        // Ambil semua data dengan tahun terbaru
+        return $this->db->get_where('achievement', ['tahun' => $latestYear])->result_array();
+    }
+
+    public function getAllAch()
+    {
+        return $this->db->get('achievement')->result_array();
+    }
 }

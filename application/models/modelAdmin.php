@@ -314,4 +314,33 @@ class modelAdmin extends CI_Model
         $this->db->where('id_milestone', $id);
         $this->db->delete('milestone');
     }
+
+    // achievement
+
+    public function getAllAchievement()
+    {
+        return $this->db->get('achievement')->result_array();
+    }
+
+    public function addAchievement($data)
+    {
+        $this->db->insert('achievement', $data);
+    }
+
+    public function getAchievementById($id)
+    {
+        return $this->db->get_where('achievement', ['id_ach' => $id])->row_array();
+    }
+
+    public function updateAchievement($id, $data)
+    {
+        $this->db->where('id_ach', $id);
+        $this->db->update('achievement', $data);
+    }
+
+    public function deleteAchievement($id)
+    {
+        $this->db->where('id_ach', $id);
+        $this->db->delete('achievement');
+    }
 }

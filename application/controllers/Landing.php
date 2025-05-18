@@ -68,6 +68,8 @@ class Landing extends CI_Controller
         $data['navbrand'] = $this->modelLanding->getdatabrand();
         $data['footercomp'] = $this->modelLanding->getProfileCompany();
         $data['footergcomp'] = $this->modelLanding->getFooterGroups();
+        $data['lastach'] = $this->modelLanding->getLatestAchievements();
+        $data['allach'] = $this->modelLanding->getAllAch();
 
         $this->load->view('landing/templates/header');
         $this->load->view('landing/templates/navbar', $data);

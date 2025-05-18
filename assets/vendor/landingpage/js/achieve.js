@@ -79,3 +79,23 @@ const swipercust = new Swiper(".mySwiperCust", {
     },
 });
 
+
+//latest achievement
+// swiper untuk Latest Achievement
+const swiperLatest = new Swiper(".myLatestSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+
+
+

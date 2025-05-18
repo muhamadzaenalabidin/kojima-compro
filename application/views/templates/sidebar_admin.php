@@ -84,6 +84,13 @@
         </a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link <?= $active == 'achievement' ? 'active' : 'collapsed'; ?>" href="<?= base_url('achievement'); ?>">
+          <i class="bi bi-window"></i>
+          <span>Achievement</span>
+        </a>
+      </li>
+
       <li class="nav-item mt-5">
         <a class="nav-link collapsed tmbl-logout" href="<?= base_url('auth/logout') ?>">
           <i class="bi bi-box-arrow-right"></i>
