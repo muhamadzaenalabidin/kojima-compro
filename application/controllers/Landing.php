@@ -95,6 +95,53 @@ class Landing extends CI_Controller
 
     public function contact()
     {
+        $this->load->library(['email', 'session', 'form_validation']);
+        $this->load->helper(['url', 'form']);
+
+        if ($this->input->post()) {
+            // SET FORM VALIDATION RULES
+            $this->form_validation->set_rules('name', 'Name', 'required|trim');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email|trim');
+            $this->form_validation->set_rules('phone_full', 'Phone', 'required|trim|numeric|min_length[10]|max_length[20]');
+            $this->form_validation->set_rules('country', 'Country', 'required');
+            $this->form_validation->set_rules('message', 'Message', 'required|trim');
+
+            if ($this->form_validation->run() == FALSE) {
+                // VALIDATION FAILED
+                $this->session->set_flashdata('error', validation_errors('<div>', '</div>'));
+                redirect('landing/contact');
+                return;
+            }
+
+            // FORM INPUT DATA
+            $name = $this->input->post('name');
+            $email = $this->input->post('email');
+            $phone = $this->input->post('phone_full');
+            $country = $this->input->post('country');
+            $message = $this->input->post('message');
+
+            // EMAIL SEND
+            $this->email->from($email, $name);
+            $this->email->to('muhamadzaenalab@gmail.com');
+            $this->email->subject("Pesan dari Contact Us");
+            $this->email->message("
+            <p><strong>Nama:</strong> $name</p>
+            <p><strong>Email:</strong> $email</p>
+            <p><strong>Phone:</strong> $phone</p>
+            <p><strong>Country:</strong> $country</p>
+            <p><strong>Message:</strong><br>$message</p>
+        ");
+
+            if ($this->email->send()) {
+                $this->session->set_flashdata('success', 'Pesan berhasil dikirim!');
+            } else {
+                $this->session->set_flashdata('error', 'Gagal mengirim pesan!');
+            }
+
+            redirect('landing/contact');
+        }
+
+        // LOAD DATA & VIEW
         $data['active'] = 'contact';
         $data['menu'] = $this->modelLanding->getAllMenu();
         $data['submenu'] = $this->modelLanding->getAllSubmenu();

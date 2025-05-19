@@ -21,43 +21,57 @@
             <div class="col-md-6">
                 <div class="contact-form">
                     <h5 class="fw-bold mb-4">Send Us a Message</h5>
-                    <form>
+                    <!-- Alert Flashdata -->
+                    <!-- Alert Flashdata -->
+                    <?php if ($this->session->flashdata('success')) : ?>
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            <?= $this->session->flashdata('success'); ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php elseif ($this->session->flashdata('error')) : ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <?= $this->session->flashdata('error'); ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php endif; ?>
+
+                    <form method="post" action="<?= base_url('landing/contact') ?>">
                         <div class="mb-3">
                             <label class="form-label">Name</label>
-                            <input type="text" class="form-control" placeholder="Full Name">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="you@example.com">
+                            <input type="text" name="name" class="form-control <?= form_error('name') ? 'is-invalid' : '' ?>" value="<?= set_value('name') ?>">
+                            <div class="invalid-feedback"><?= form_error('name') ?></div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Number Phone</label>
-                            <div class="input-group">
-                                <div class="input-group-text p-0 border-0">
-                                    <input id="phone" name="phone" type="tel" class="form-control border-end-0"
-                                        style="width: 90px;">
-                                </div>
-                                <input type="text" class="form-control" placeholder="nomor"
-                                    aria-label="Phone number only">
-                            </div>
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control <?= form_error('email') ? 'is-invalid' : '' ?>" value="<?= set_value('email') ?>">
+                            <div class="invalid-feedback"><?= form_error('email') ?></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Number Phone</label>
+                            <input id="phone" name="phone" type="tel" class="form-control <?= form_error('phone_full') ? 'is-invalid' : '' ?>">
+                            <input type="hidden" name="phone_full" id="phone_full" value="<?= set_value('phone_full') ?>">
+                            <div class="invalid-feedback"><?= form_error('phone_full') ?></div>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Country</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select Country</option>
-                                <option value="1">Indonesia</option>
-                                <option value="2">Malaysia</option>
-                                <option value="3">Singapure</option>
+                            <select class="form-select <?= form_error('country') ? 'is-invalid' : '' ?>" name="country">
+                                <option value="">Select Country</option>
+                                <option value="Indonesia" <?= set_select('country', 'Indonesia') ?>>Indonesia</option>
+                                <option value="Malaysia" <?= set_select('country', 'Malaysia') ?>>Malaysia</option>
+                                <option value="Singapure" <?= set_select('country', 'Singapure') ?>>Singapure</option>
                             </select>
+                            <div class="invalid-feedback"><?= form_error('country') ?></div>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Message</label>
-                            <textarea class="form-control" rows="5"
-                                placeholder="Write your message here..."></textarea>
+                            <textarea class="form-control <?= form_error('message') ? 'is-invalid' : '' ?>" name="message" rows="5"><?= set_value('message') ?></textarea>
+                            <div class="invalid-feedback"><?= form_error('message') ?></div>
                         </div>
+
                         <button type="submit" class="btn kojimacolor w-100">Send Message</button>
                     </form>
                 </div>
